@@ -20,6 +20,9 @@ import java.util.Date;
         private String type;
         private float solde;
         private LocalDate dateCreation;
+    @ManyToOne
+    @JoinColumn(name = "utilisateur_id")
+    private Utilisateur utilisateur;
 
 
 
