@@ -11,6 +11,9 @@ import java.util.List;
 public class UserService {
     @Autowired
     private UserRepository userRepository;
+    public Utilisateur createUser(Utilisateur utilisateur) {
+        return userRepository.save(utilisateur);
+    }
 
     public List<Utilisateur> getAllUsers() {
         return userRepository.findAll();
